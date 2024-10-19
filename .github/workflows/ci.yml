@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  formatting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang-format clang-tidy cppcheck
+
+      - name: Clang Tidy
+        run: |
+          find . -name "*.cpp" -o -name "*.h" | xargs clang-tidy -p build
+        continue-on-error: true
+
+      - name: C++ Check
+        run: |
+          cppcheck --enable=all --inconclusive --force --inline-suppr --std=c++17 --language=c++ --platform=unix64 --template=clang --quiet --error-exitcode=1 .
+        continue-on-error: true
+
+      - name: Clang Format
+        run: |
+          find . -name "*.cpp" -o -name "*.h" | xargs clang-format -i -style=file
+          git diff > format-diff.txt
+          if [ -s format-diff.txt ]; then
+            echo "Code is not properly formatted. See format-diff.txt for details."
+            exit 1
+          fi
+
+      - name: Format Output
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: linter-and-formatter-results
+          path: |
+            clang-tidy-output.txt
+            cppcheck-output.txt
+            format-diff.txt
+
+      - name: Check for linting and formatting errors
+        run: |
+          if [ -s clang-tidy-output.txt ] || [ -s cppcheck-output.txt ] || [ -s format-diff.txt ]; then
+            echo "Linting or formatting errors found. Check the artifacts for details."
+            exit 1
+          fi
