@@ -35,8 +35,6 @@ jobs:
 
       - name: Clean Build Directory
         run: |
-          rm -rf build
-          cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_CXX_STANDARD=20
           ctest --test-dir build/release --output-on-failure
 
       - name: Check for Errors

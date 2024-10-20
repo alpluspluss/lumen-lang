@@ -30,13 +30,5 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Build
-        run: |
-          rm -rf build
-          mkdir build
-          cd build
-          cmake ..
-          make
-
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
