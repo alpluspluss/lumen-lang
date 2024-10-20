@@ -1,7 +1,9 @@
 file(GLOB LANG_SRC "src/*.cpp")
 
 add_library(nightglow-lang STATIC ${LANG_SRC}
-        include/lang.h)
+        include/lang.h
+        include/lexer.h
+        ../extern/robin_hood.h)
 
 target_include_directories(nightglow-lang PUBLIC
         ${CMAKE_SOURCE_DIR}/common

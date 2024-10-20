@@ -3,7 +3,13 @@
 // This header file is a part of the Nightglow programming language, licensed under the MIT license.
 //
 
-int main(int argc, char** argv)
+#include <cassert>
+#include <chrono>
+#include <iostream>
+
+#include "../lang/include/lexer.h"
+
+int main()
 {
     return 0;
 }

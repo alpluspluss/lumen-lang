@@ -1,6 +1,8 @@
 file(GLOB CLI_SRC "src/*.cpp")
 
-add_executable(Nightglow ${CLI_SRC} main.cpp)
+add_executable(Nightglow ${CLI_SRC}
+        main.cpp
+)
 
 target_include_directories(Nightglow PRIVATE
         ${CMAKE_SOURCE_DIR}/common
