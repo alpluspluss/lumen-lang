@@ -33,9 +33,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-
 
-      - name: Run tests
+      - name: Run Tests
         run: |
-          ctest --test-dir build/release --output-on-failure
+          cd build/${{ matrix.build_type }}/bin && ctest --output-on-failure
 
       - name: Check for Errors
         run: |

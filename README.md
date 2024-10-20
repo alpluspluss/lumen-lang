@@ -6,7 +6,7 @@ overhead during runtime.
 
 ## Roadmap
 
-- [ ] Lexer
+- [X] Lexer
 - [ ] Parser
 - [ ] Semantic Analysis
 - [ ] Code Generation
