@@ -1,2 +1,2 @@
-nightglow-tests 2 0.00125587
+nightglow-tests 3 0.00069675
 ---

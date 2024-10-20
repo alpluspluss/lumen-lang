@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          cd build/${{ matrix.build_type }}/bin && ctest --output-on-failure
+          cd build/release && ctest --output-on-failure
 
       - name: Check for Errors
         run: |
