@@ -1,0 +1,129 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "cli",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-cli-Release-4daa19b34781f730c61b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "cli",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lang",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lang-Release-0e9706f713951b52b3a9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lang",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Release-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "Nightglow",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Nightglow::@434c77fc11d56e0cadb1",
+					"jsonFile" : "target-Nightglow-Release-2d95da6401570c84c9b7.json",
+					"name" : "Nightglow",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "nightglow-lang::@70857b9815edabdbe926",
+					"jsonFile" : "target-nightglow-lang-Release-faf12606bed065ab91b8.json",
+					"name" : "nightglow-lang",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "nightglow-tests::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-nightglow-tests-Release-668bba1c133d1653a21d.json",
+					"name" : "nightglow-tests",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/tand/CLion/nightglow-lang/build/release",
+		"source" : "/Users/tand/CLion/nightglow-lang"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
