@@ -1,7 +1,7 @@
 # ninja log v6
-1	862	1729404915549516203	tests/CMakeFiles/nightglow-tests.dir/main.cpp.o	c067e8c7dc62de9f
-1	875	1729404915549382408	cli/CMakeFiles/Nightglow.dir/main.cpp.o	6d99c9e03d16e15f
-1	1021	1729404915549121484	lang/CMakeFiles/nightglow-lang.dir/src/lexer.cpp.o	8d72eac87f47cd1f
-1021	1041	1729404916569249099	lang/libnightglow-lang.a	c06d23501346b9c9
-1041	1142	1729404916588721568	cli/Nightglow	f4c51778cee9983
-1041	1142	1729404916588930907	Release/bin/nightglow-tests	349fb5be2ca6a01e
+2	758	1729405232313622266	tests/CMakeFiles/nightglow-tests.dir/main.cpp.o	c067e8c7dc62de9f
+1	760	1729405232313490263	cli/CMakeFiles/Nightglow.dir/main.cpp.o	6d99c9e03d16e15f
+1	889	1729405232313218422	lang/CMakeFiles/nightglow-lang.dir/src/lexer.cpp.o	8d72eac87f47cd1f
+889	909	1729405233201011204	lang/libnightglow-lang.a	c06d23501346b9c9
+909	1008	1729405233220852307	cli/Nightglow	f4c51778cee9983
+909	1008	1729405233221053063	Release/bin/nightglow-tests	349fb5be2ca6a01e

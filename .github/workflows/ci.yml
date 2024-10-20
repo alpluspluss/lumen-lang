@@ -19,7 +19,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y clang
 
-      - name: Check Clang++ Version
+      - name: Clang++ Version
         run: clang++ --version
 
       - name: Setup CMake
@@ -33,7 +33,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-
 
-      - name: Clean Build Directory
+      - name: Run tests
         run: |
           ctest --test-dir build/release --output-on-failure
 

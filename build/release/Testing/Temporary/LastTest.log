@@ -1,10 +1,10 @@
-Start testing: Oct 20 02:15 EDT
+Start testing: Oct 20 02:20 EDT
 ----------------------------------------------------------
 1/1 Testing: nightglow-tests
 1/1 Test: nightglow-tests
 Command: "/Users/tand/CLion/nightglow-lang/build/release/Release/bin/nightglow-tests"
 Directory: /Users/tand/CLion/nightglow-lang/build/release/tests
-"nightglow-tests" start time: Oct 20 02:15 EDT
+"nightglow-tests" start time: Oct 20 02:20 EDT
 Output:
 ----------------------------------------------------------
 [32m[PASSED]: Basic tokenization
@@ -13,11 +13,11 @@ Output:
 [32m	All tests passed successfully
 [0m
 <end of output>
-Test time =   0.00 sec
+Test time =   0.16 sec
 ----------------------------------------------------------
 Test Passed.
-"nightglow-tests" end time: Oct 20 02:15 EDT
+"nightglow-tests" end time: Oct 20 02:20 EDT
 "nightglow-tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 20 02:15 EDT
+End testing: Oct 20 02:20 EDT

@@ -6,29 +6,42 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 5 * * *'  # Run daily at 05:00 UTC
 
 jobs:
   analyze:
+    name: Analyze (${{ matrix.language }})
     runs-on: ubuntu-latest
     permissions:
       security-events: write
       packages: read
       actions: read
       contents: read
+
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'cpp' ]
+        language: [ 'c-cpp' ]
+        build-mode: [ 'autobuild' ]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Initialize the CodeQL tools
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      - if: matrix.build-mode == 'manual'
+        shell: bash
+        run: |
+          echo 'Replace this with the commands to build your code, for example:'
+          echo '  cmake . && make'
+          exit 1  # Exit with an error to signal that this step is incomplete
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{matrix.language}}"
